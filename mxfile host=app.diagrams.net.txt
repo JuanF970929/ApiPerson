@@ -1,0 +1,126 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="ABB Diagrams" id="1x2qXj2vKhD1vN9z-CTY">
+    <mxGraphModel dx="1424" dy="813" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <!-- Diagrama de Clases -->
+        <mxCell id="class1" value="Pet&#xa;id: int&#xa;name: string&#xa;age: byte" style="shape=umlClass;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="160" height="90" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="class2" value="NodeABB&#xa;data: Pet&#xa;left: NodeABB&#xa;right: NodeABB" style="shape=umlClass;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="280" y="40" width="180" height="110" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="class3" value="ABB&#xa;+ add(data: Pet): Exception&#xa;+ update(id: int, data: Pet): boolean" style="shape=umlClass;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="160" width="230" height="90" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="class4" value="ABBService&#xa;abb: ABB" style="shape=umlClass;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="280" y="160" width="160" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="class5" value="ABBController&#xa;+ create(pet: Pet)&#xa;+ update(id: int, pet: Pet)" style="shape=umlClass;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="500" y="160" width="210" height="80" as="geometry"/>
+        </mxCell>
+
+        <!-- Relaciones -->
+        <mxCell id="rel1" style="endArrow=block;" edge="1" parent="1" source="class1" target="class2">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="rel2" style="endArrow=block;" edge="1" parent="1" source="class2" target="class3">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="rel3" style="endArrow=block;" edge="1" parent="1" source="class4" target="class3">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="rel4" style="endArrow=block;" edge="1" parent="1" source="class5" target="class4">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Título -->
+        <mxCell id="title" value="Diagrama de Clases" style="text;html=1;fontSize=18;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="10" width="300" height="30" as="geometry"/>
+        </mxCell>
+
+        <!-- Flujo de Peticiones HTTP -->
+        <mxCell id="box1" value="Cliente" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="320" width="100" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="box2" value="HTTP" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="160" y="320" width="100" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="box3" value="FastAPI" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="280" y="320" width="100" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="box4" value="ABBController" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="400" y="320" width="120" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="box5" value="ABBService" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="540" y="320" width="120" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="box6" value="ABB" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="680" y="320" width="100" height="40" as="geometry"/>
+        </mxCell>
+
+        <!-- Flechas HTTP -->
+        <mxCell id="arrow1" style="endArrow=block;" edge="1" parent="1" source="box1" target="box2">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="arrow2" style="endArrow=block;" edge="1" parent="1" source="box2" target="box3">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="arrow3" style="endArrow=block;" edge="1" parent="1" source="box3" target="box4">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="arrow4" style="endArrow=block;" edge="1" parent="1" source="box4" target="box5">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="arrow5" style="endArrow=block;" edge="1" parent="1" source="box5" target="box6">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Título -->
+        <mxCell id="title2" value="Flujo de Peticiones HTTP" style="text;html=1;fontSize=18;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="280" width="400" height="30" as="geometry"/>
+        </mxCell>
+
+        <!-- GitFlow -->
+        <mxCell id="gf1" value="main" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="850" y="40" width="100" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="gf2" value="develop" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="850" y="100" width="100" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="gf3" value="release" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="850" y="160" width="100" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="gf4" value="feature" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="750" y="220" width="100" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="gf5" value="hotfix" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="950" y="220" width="100" height="40" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="gf_ar1" style="endArrow=block;" edge="1" parent="1" source="gf1" target="gf2">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="gf_ar2" style="endArrow=block;" edge="1" parent="1" source="gf2" target="gf3">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="gf_ar3" style="endArrow=block;" edge="1" parent="1" source="gf3" target="gf4">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="gf_ar4" style="endArrow=block;" edge="1" parent="1" source="gf3" target="gf5">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="title3" value="GitFlow" style="text;html=1;fontSize=18;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="850" y="10" width="200" height="30" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
